@@ -14,69 +14,68 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              const CircleAvatar(
+            children: const <Widget>[
+              CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/profile.JPG'),
               ),
-              const Text('Rodrigo Wanderley',
+              Text('Rodrigo Wanderley',
                 style: TextStyle(
-                  fontFamily: 'Montserrat',
+                  fontFamily : 'Montserrat',
                   fontSize: 20.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text('FLUTTER DEVELOPER',
+              Text('FLUTTER DEVELOPER',
                 style: TextStyle(
                   fontFamily: 'SansPro',
                   fontSize: 20.0,
                   color: Colors.white70,
                   letterSpacing: 2.5,
                 ),
-              ), Container(
-                padding: const EdgeInsets.all(10.0),
-                color: Colors.white,
-                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text('+ 55 31 99981-7896',
-                    style: TextStyle(
-                      color: Colors.teal,
-                      fontFamily: 'SansPro',
-                      fontSize: 20.0
-                    ))
-                  ]
-                )
               ),
-              Container(
-                padding: const EdgeInsets.all(10.0),
-                color: Colors.white,
-                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(
-                      Icons.mail,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text('boaventurarodrigo@yahoo.com.br',
-                    style: TextStyle(
-                      color: Colors.teal,
-                      fontFamily: 'SansPro',
-                      fontSize: 15.0
-                    ))
-                  ]
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
                 ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.telegram,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+ 55 31 99981-7896',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.teal,
+                      fontFamily: 'SansPro'
+                    )
+                  )
+                )
+              ),Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'boaventurarodrigo@yahoo.com.br',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      color: Colors.teal,
+                      fontFamily: 'SansPro'
+                    )
+                  )
+                )
               ),
             ],
           ),
