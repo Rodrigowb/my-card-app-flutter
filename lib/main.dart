@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,29 +14,72 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const <Widget>[
-              CircleAvatar(
+            children: <Widget>[
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/profile.JPG'),
               ),
-              Text('Rodrigo Wanderley',
+              const Text('Rodrigo Wanderley',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 20.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                ),
               ),
-              ),
-              Text('FLUTTER DEVELOPER',
+              const Text('FLUTTER DEVELOPER',
                 style: TextStyle(
                   fontFamily: 'SansPro',
                   fontSize: 20.0,
                   color: Colors.white70,
                   letterSpacing: 2.5,
+                ),
+              ), Container(
+                padding: const EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('+ 55 31 99981-7896',
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'SansPro',
+                      fontSize: 20.0
+                    ))
+                  ]
+                )
               ),
-              )
-            ]
-          )
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(
+                      Icons.mail,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('boaventurarodrigo@yahoo.com.br',
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'SansPro',
+                      fontSize: 15.0
+                    ))
+                  ]
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
